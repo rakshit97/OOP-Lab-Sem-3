@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{
+  clrscr();
+  char a[50], b[50];
+  int i, la, lb, ll, flag=1;
+
+  cout<<"Enter string 1 : ";
+  gets(a);
+  cout<<"Enter string 2 : ";
+  gets(b);
+  for(i=0;a[i]!='\0';i++);
+  la=i;
+  for(i=0;b[i]!='\0';i++);
+  lb=i;
+  if(la>lb)
+    ll=la;
+  else
+    ll=lb;
+  for(i=0;i<ll;i++)
+  {
+    if(a[i]!=b[i])
+    {
+      flag=1;
+      cout<<"\nStrings do not match";
+      break;
+    }
+  }
+  if(flag==0)
+    cout<<"\nStrings match and length = "<<ll;
+  getch();
+}
